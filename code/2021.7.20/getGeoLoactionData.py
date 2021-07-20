@@ -1,4 +1,4 @@
-# getGeoLocationData
+# 주소 값으로 위도 경도 값 구하기
 # 황성호 2021.07.20 
 
 import urllib.request
