@@ -1,3 +1,6 @@
+# GetGoVSearchResult()
+# 이슬 2021.07.20
+
 import json
 import urllib.request
 
