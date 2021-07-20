@@ -24,11 +24,10 @@ def GetGoVSearchResult(baseurl, pageValue, perPageValue):
     
     
 def Main():
-    baseurl = ""
-    pageData = 
-    perPageData = 
-
-    jsonSearchResult = GetGoVSearchResult(baseurl, pageData, perPageData)
+    pubUrl = ""
+    trustUrl = ""
+    jsonSearchResult = GetGoVSearchResult(pubUrl, pageData, perPageData)
+    jsonSearchResult.append() = GetGoVSearchResult(trustUrl, pageData, perPageData)
 
     with open('%s_GoVData_%s.json' % ('예방접종센터', '데이터'), 'w', encoding='utf-8') as filedata:
         rJson = json.dumps(jsonSearchResult,
