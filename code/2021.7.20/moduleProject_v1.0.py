@@ -26,11 +26,7 @@ def Get_Request_GoUrl(url): # 크롤러를 담당하는 부분
 
 
 def GetDataChange(resultJsonData):
-    for iCount in range(0,resultJsonData['currentCount']):
-        addr = resultJsonData['data'][iCount]['orgZipaddr']
-        xdata, ydata = GetGeoLoactionData(addr)
-        resultJsonData['data'][iCount]['lng'] = xdata
-        resultJsonData['data'][iCount]['lat'] = ydata
+    pass    # 7.21 제작 예정
         
 
 def GetGoVSearchResult(baseUrl, par, pageValue, perPageValue, jsonSearchResult):   
