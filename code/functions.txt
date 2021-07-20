@@ -12,6 +12,7 @@
 데이터 정제(위탁 의료기관) GetTrustDataChange(trustData)
   - 컬럼명을 새롭게 만들기
   - 기관명, 주소, 전화번호, 좌표
+위탁 의료기관 주소로 좌표 찾기 : GetDataChange
 
 
 [크롤링 데이터 검토용]
