@@ -8,7 +8,7 @@ def Get_Request_GoUrl(url):
     pass
 
 
-def GetGoVSearchResult(baseurl, pageValue, perPageValue):   
+def GetGoVSearchResult(baseUrl, pageValue, perPageValue):   
     paraData = "page=" + str(pageValue)
     paraData += "&perPage=" + str(perPageValue)
     keyValue = "&serviceKey=%2BptXuibm2mCBLhAZqH%2F88WSuHtU%2BmhKVJUWGVelVYJKc1NENMurzQaKEMPN%2Bd99LWr97LDZcj1XoIkcr6UlUjg%3D%3D"
@@ -24,8 +24,8 @@ def GetGoVSearchResult(baseurl, pageValue, perPageValue):
     
     
 def Main():
-    pubUrl = ""
-    trustUrl = ""
+    baseUrl = pubUrl
+    baseUrl = trustUrl
     jsonSearchResult = GetGoVSearchResult(pubUrl, pageData, perPageData)
     jsonSearchResult.append() = GetGoVSearchResult(trustUrl, pageData, perPageData)
 
