@@ -22,6 +22,7 @@ def GetGeoLoactionData(addr):
     else:
         tempData = json.loads(resultData) # 데이터를 정형으로 변경함 
     
+    # xdata : 경도 ydata : 위도
     if 'addresses' in tempData.keys():
         xdata = tempData['addresses'][0]['x']
         ydata = tempData['addresses'][0]['y']
