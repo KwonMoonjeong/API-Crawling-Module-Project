@@ -13,7 +13,7 @@ import pandas as pd
 client_id = "xa25ja6nca"
 client_secret = "1a3NIZFJLWWpgOnc1tgDJMFYTTKQLzVsXTH7T4X2"
 
-def get_request_url(url): # 데이터 요청하여 가져오기 - 크럴러 작업
+def  Get_Request_NaverUrl(url): # 데이터 요청하여 가져오기 - 크럴러 작업
     req = urllib.request.Request(url) # 검색 URL 경로 지정
     req.add_header("X-NCP-APIGW-API-KEY-ID", client_id) # 경로 접근하기 위한 아이디 - naver에서 발급
     req.add_header("X-NCP-APIGW-API-KEY", client_secret) # 경로 접근하기 위한 비밀번호 - naver에서 발급
