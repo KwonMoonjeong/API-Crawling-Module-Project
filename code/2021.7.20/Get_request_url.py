@@ -53,13 +53,12 @@ def GetGeoLocationData(addr):
 
 def Main():
     addrData = GetGeoLocationData("공공데이터에서 가져온 병원주소")
-    # 구글 지도
+    
     tip = '공공데이터에서 가져온 병원이름' #여기 부분부터는 제가 임의로 만들어 본것이라 수정하시거나 빼셔도 됩니다
     map_data = folium.Map(location=addrData, zoom_start=15)
     map_data = folium.Marker(addrData, popup='병원이름 \n병원전화번호', tooltip=tip).add_to(map_data) 
     
-    # 다른 방법 Naver API 를 이용한 Naver Map 사용(Static Map)
-
+    
 if __name__ == '__main__':
     Main()
 
