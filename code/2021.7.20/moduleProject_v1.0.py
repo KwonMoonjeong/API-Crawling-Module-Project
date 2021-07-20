@@ -83,6 +83,7 @@ def GetGeoLoactionData(addr):
         ydata = tempData['addresses'][0]['y']
 
     return xdata, ydata
+
 def Main():
     pubUrl = "https://api.odcloud.kr/api/15077586/v1/"
     pubUrl_par = "centers"
