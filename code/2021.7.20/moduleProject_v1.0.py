@@ -92,8 +92,8 @@ def Main():
     pageData = 1
     perPageData = 10
     jsonSearchResult = []
+    
     GetGoVSearchResult(pubUrl, pubUrl_par, pageData, perPageData,jsonSearchResult)
-
     GetGoVSearchResult(trustUrl, trusetUrl_par, pageData, perPageData, jsonSearchResult)
 
     with open('%s_GoVData_%s.json' % ('예방접종센터', '데이터'), 'w', encoding='utf-8') as filedata:
