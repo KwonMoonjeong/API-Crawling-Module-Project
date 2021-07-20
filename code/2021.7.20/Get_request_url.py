@@ -28,37 +28,3 @@ def get_request_url(url): # 데이터 요청하여 가져오기 - 크럴러 작�
         print("[%s] 오류 : %s " % datetime.datetime.now(), url)
         return None
 
-def GetGeoLocationData(addr):
-    baseUrl = "https://naveropenapi.apigw.ntruss.com/map-geocode/v2/geocode"
-    paraData = "?query=%s" % urllib.parse.quote(addr)
-    resulturl = baseUrl + paraData  #URL값 완성
-
-    resultData = get_request_url(resulturl) 
-
-    if(resultData == None):
-        return None
-
-    else:    
-        tempData = json.loads(resultData)
-    
-        xdata = tempData['addresses'][0]["x"] # 위도 경도 값 뽑아오기
-        ydata = tempData['addresses'][0]["y"]
-
-        
-    
-    return ydata,xdata
-
-
-
-
-def Main():
-    addrData = GetGeoLocationData("공공데이터에서 가져온 병원주소")
-    
-    tip = '공공데이터에서 가져온 병원이름' #여기 부분부터는 제가 임의로 만들어 본것이라 수정하시거나 빼셔도 됩니다
-    map_data = folium.Map(location=addrData, zoom_start=15)
-    map_data = folium.Marker(addrData, popup='병원이름 \n병원전화번호', tooltip=tip).add_to(map_data) 
-    
-    
-if __name__ == '__main__':
-    Main()
-
