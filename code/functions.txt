@@ -2,7 +2,7 @@
 
 [데이터 크롤링]
 공공데이터 크롤러 : Get_Request_GoUrl(url)
-사전 준비 작업 및 분류 : GetGoVSearchResult(pageValue, perPageValue)
+사전 준비 작업 및 분류 : GetGoVSearchResult(baseurl, pageValue, perPageValue)
 네이버 데이터 크롤러 : Get_Request_NaverUrl(url)
 주소 입력, 좌표 추출 : GetGeoLoactionData(addr)
 
