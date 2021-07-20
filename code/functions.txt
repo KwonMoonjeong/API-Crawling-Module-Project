@@ -8,8 +8,8 @@
 
 
 [데이터 정제]
-데이터 정제(공공 병원) : GetPubDataChange
-데이터 정제(위탁 의료기관) GetTrustDataChange
+데이터 정제(공공 병원) : GetPubDataChange(pubData)
+데이터 정제(위탁 의료기관) GetTrustDataChange(trustData)
   - 컬럼명을 새롭게 만들기
   - 기관명, 주소, 전화번호, 좌표
 
@@ -19,14 +19,16 @@
 
 
 [지도 표현]
-마커 표시 : MapMarker
-  - 옵션 : tip, popup
+마커 표시 : folium.Map(location,zoom_start)
+            folium.Marker(location,popup,tip).add_to(map_data)
 
 
 [Main 함수]
-GetGeoLoactionData(addr) 실행 : Main()
-제이슨 파일 작성 : Main()
-
+GetGoVSearchResult(pageValue, perPageValue)
+GetPubDataChange(pubData)
+GetTrustDataChange(trustData)
+folium.Map(location,zoom_start)
+folium.Marker(location,popup,tip).add_to(map_data)
 
 <필요한 모듈 목록>
 import urllib.request
