@@ -11,7 +11,7 @@
 데이터 정제(공공 병원) : GetPubDataChange(pubData) : B조 (유승현, 이슬)
 데이터 정제(위탁 의료기관) GetTrustDataChange(trustData) : A조 (권문정, 황성호)
   - 컬럼명을 새롭게 만들기
-  - 딕셔너리명(changeDataName), 기관명(hName), 주소(hAddress) - 서울/경기도 , 전화번호(hNum), 좌표(위도 : hLat, 경도 : hLon)
+  - 딕셔너리명(changeDataName), 기관명(hName), 주소(hAddress) - 서울 , 전화번호(hNum), 좌표(위도 : hLat, 경도 : hLon)
 위탁 의료기관 주소로 좌표 찾기 : GetDataChange(resultJsonData)
 
 
