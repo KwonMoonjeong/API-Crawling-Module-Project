@@ -24,11 +24,7 @@ def Get_Request_GoUrl(url): # 크롤러를 담당하는 부분
         print("[%s] 오류 : %s " % datetime.datetime.now(), url)
         return None
 
-
-def GetDataChange(resultJsonData):
-    pass    # 7.21 제작 예정
-        
-
+    
 def GetGoVSearchResult(baseUrl, par, pageValue, perPageValue):   
     paraData = "?page=" + str(pageValue)
     paraData += "&perPage=" + str(perPageValue)
