@@ -1,4 +1,5 @@
-# 이슬 2021.07.21
+# 공공 데이터 - 공공 병원 데이터 정제
+# 유승현, 이슬 / 2021.07.21
 
 import urllib.request
 import datetime
@@ -11,8 +12,8 @@ def GetPubDataChange(resultJsonData, changeDataName):
         hName = resultJsonData[0]['data'][iCount]['centerName']
         hAddress = resultJsonData[0]['data'][iCount]['address']
         hNum = resultJsonData[0]['data'][iCount]['phoneNumber']
-        hLat = resultJsonData[0]['data'][iCount]['lat']     # 위도
-        hLon = resultJsonData[0]['data'][iCount]['lng']    # 경도
+        hLat = resultJsonData[0]['data'][iCount]['lat']
+        hLon = resultJsonData[0]['data'][iCount]['lng']    
 
         changeDataName.append({ 'hName': hName,
                             'hAddress': hAddress,
