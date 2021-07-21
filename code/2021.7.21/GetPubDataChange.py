@@ -1,5 +1,5 @@
 # 공공 데이터 - 공공 병원 데이터 정제
-# 1-Bwh(유승현, 이슬) / 2021.07.21
+# 1-B조(유승현, 이슬) / 2021.07.21
 
 import urllib.request
 import datetime
