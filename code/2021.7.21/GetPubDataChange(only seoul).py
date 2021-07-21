@@ -1,5 +1,5 @@
-# 서울 의료기관 데이터만 가져오기
-# 1-B조 유승현, 이슬 2021.07.21
+# 공공데이터 서울 의료기관만 필터링
+# 1-B조(유승현, 이슬) / 2021.07.21
 def GetPubDataChange(resultJsonData, changeDataName):
     
  for iCount in range(0, resultJsonData['currentCount']):
