@@ -6,7 +6,7 @@ from pandas import json_normalize
 import numpy as np
 
 
-def GetTrustDataChange(resultJsonData, changeDataName):
+def GetTrustDataChangePandas(resultJsonData, changeDataName):
 
     dataOfResult = json_normalize(resultJsonData['data']) # "data"의 값들을 Pandas 데이터프레임으로 추출
     dataOfResult = dataOfResult[['orgnm', 'orgZipaddr', 'orgTlno']]    # 기관명, 주소, 전화번호 컬럼 추출
