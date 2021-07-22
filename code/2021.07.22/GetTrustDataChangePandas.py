@@ -14,4 +14,5 @@ def GetTrustDataChange(resultJsonData, changeDataName):
                                                 'orgZipaddr' : 'hAddress',
                                                  'orgTlno' : 'hNum'}, inplace=False)
 
-    dataOfResult['hLon', 'hLat'] = dataOfResult['hAddress'].apply(GetGeoLocationData)
+    dataOfResult['hLon'], dataOfResult['hLat'] = zip(*dataOfResult['hAddress'].apply(GetGeoLocationData))
+    # 좌표 구해서 2개의 컬럼에 넣어주기
