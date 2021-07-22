@@ -1,4 +1,4 @@
-# pandas 적용 후
+# 테스트용 (pandas 적용 후)
 # 2021.07.22 황성호
 
 from operator import iconcat
