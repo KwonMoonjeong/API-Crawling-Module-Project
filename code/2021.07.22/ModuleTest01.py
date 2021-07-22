@@ -253,11 +253,11 @@ def Main():
     jsonSearchResult= GetGoVSearchResult(pubUrl, pubUrl_par,pageData, perPageData)
 
     trustUrl = "https://api.odcloud.kr/api/apnmOrg/v1/"
-    trusetUrl_par = "list"
-    perPageData = CheckTotalCount(trustUrl,trusetUrl_par)
+    trustUrl_par = "list"
+    perPageData = CheckTotalCount(trustUrl,trustUrl_par)
 
     perPageData = 10 ## 테스트용
-    jsonSearchResult.append(GetGoVSearchResult(trustUrl,trusetUrl_par ,pageData, perPageData))
+    jsonSearchResult.append(GetGoVSearchResult(trustUrl,trustUrl_par ,pageData, perPageData))
     
     baseUrl = "https://naveropenapi.apigw.ntruss.com/map-geocode/v2/geocode"
     paraData = "?query=%s" % urllib.parse.quote('서울특별시 중구 필동로1길 30')
