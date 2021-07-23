@@ -205,7 +205,7 @@ def Main():
 
     # addr = '서울특별시 중구 필동로1길 30'
     # dataSet = Get_Geo_Loaction_Data(addr)
-    # Map_Marker(getChangeData, dataset[0]['hLon'], dataset[0]['hLat'], goDataTotal)
+    # Map_Marker(getChangeData, dataSet[0]['hLon'], dataSet[0]['hLat'], goDataTotal)
 
     print("-------%s seconds -------" % (time.time() - start_time))
 
