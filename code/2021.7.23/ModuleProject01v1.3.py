@@ -173,7 +173,7 @@ def Map_Marker(getChangeData, hLon, hLat, pubTotal):
     folium.Marker([hLat, hLon], popup = "내 위치", icon = folium.Icon(color = 'gray')).add_to(focus)
     datalen = len(getChangeData)
     for iCount in range(0, datalen):
-        if(getChangeData.iloc[iCount]['hLat'] == 0 ):
+        if(getChangeData.iloc[iCount]['hLat'] == None ):
             continue
         if(iCount >= pubTotal):
             icon = folium.Icon(color = 'red')
@@ -202,10 +202,9 @@ def Main():
     perPageData = Check_Total_Count(trustUrl, trustUrl_par)
     trustData = Get_Go_Search_Result(trustUrl, trustUrl_par, pageData, perPageData)
     getChangeData = pd.concat([goData, trustData], axis = 0)
-    getChangeData = getChangeData.fillna(0)
 
-    addr = '서울특별시 중구 필동로1길 30'
-    dataSet = Get_Geo_Loaction_Data(addr)
+    # addr = '서울특별시 중구 필동로1길 30'
+    # dataSet = Get_Geo_Loaction_Data(addr)
     # Map_Marker(getChangeData, dataset[0]['hLon'], dataset[0]['hLat'], goDataTotal)
 
     print("-------%s seconds -------" % (time.time() - start_time))
