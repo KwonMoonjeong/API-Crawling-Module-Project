@@ -1,3 +1,6 @@
+# 위탁의료기관 데이터 정제 (Pandas사용, 멀티 프로세스 사용 전)
+# 1조(권문정) 2021.07.22
+
 import urllib.request
 import datetime
 import json
