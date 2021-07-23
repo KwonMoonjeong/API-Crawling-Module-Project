@@ -13,7 +13,6 @@
 데이터 정제(위탁 의료기관) Get_Trustdata_Change(trustData) : A조 (권문정, 황성호)
   - 컬럼명을 새롭게 만들기
   - 딕셔너리명(changeDataName), 기관명(hName), 주소(hAddress) - 서울, 전화번호(hNum), 좌표(위도 : hLat, 경도 : hLon)
-위탁 의료기관 주소로 좌표 찾기 : GetDataChange(resultJsonData)
 multi processing한 결과 값 데이터 정제(주소, 위도, 경도) : Multiresult_To_Dic(results, index)
 
 [멀티프로세싱]
