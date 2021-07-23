@@ -1,3 +1,13 @@
+# 위탁의료기관 데이터 정제 (Pandas와 for문 동시 사용, 멀티 프로세스 사용 전)
+# 1조(권문정) 2021.07.22
+
+import urllib.request
+import datetime
+import json
+import pandas as pd
+from pandas import json_normalize
+import numpy as np
+
 def GetTrustDataChangePandasFor(resultJsonData, changeDataName):
 
     dataOfResult = json_normalize(resultJsonData['data']) # "data"의 값들을 Pandas 데이터프레임으로 추출
