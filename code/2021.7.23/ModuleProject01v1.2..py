@@ -1,9 +1,6 @@
 # 최종 ModuleProject01v1.2 (데이터 프레임 적용 X)
 # 1조(권문정, 유승현, 이슬, 황성호) 2021.07.23
 
-# 테스트용 (Pandas 적용 전)
-# 2021.07.22 황성호
-
 from operator import iconcat
 import urllib.request
 import datetime
