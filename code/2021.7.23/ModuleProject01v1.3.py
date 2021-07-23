@@ -121,9 +121,6 @@ def Get_Trustdata_Change(trustData):
     resultOfData = resultOfData.rename(columns = {'orgnm' : 'hName',      # 컬럼명 변경
                                                   'orgZipaddr' : 'hAddress',
                                                   'orgTlno' : 'hNum'}, inplace = False)
-    
-    resultOfData.sort_values(by = ['hAddress'], axis = 0)
-    print("[%s] resultOfData sorted 성공 : " % datetime.datetime.now())
 
     # 위도 경도 값을 가져오기 위한 multi processing 시작 
     results = Get_Locate_Multi(resultOfData['hAddress'])
