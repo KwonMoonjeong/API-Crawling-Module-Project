@@ -33,7 +33,7 @@ Check_Total_Count(pubUrl, pubUrl_par)
 Get_Go_Search_Result(pubUrl, pubUrl_par, pageData, perPageData)
 Check_Total_Count(trustUrl, trustUrl_par)
 Get_Go_Search_Result(trustUrl, trustUrl_par, pageData, perPageData)
-Map_Marker(getChangeData, dataset[0]['hLon'], dataset[0]['hLat'], goDataTotal)
+Map_Marker(getChangeData, hLon, hLat, goDataTotal)
 
 <필요한 모듈 목록>
 import urllib.request
