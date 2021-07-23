@@ -18,10 +18,6 @@ multi processing한 결과 값 데이터 정제(주소, 위도, 경도) : Multir
 [멀티프로세싱]
 Get_Geo_Loaction_Data 멀티프로세싱 : Get_Locate_Multi(urllist)
 
-[크롤링 데이터 검토용]
-공공 병원, 위탁 의료기관 JSON 파일을 병합 : Merge(ijson, jjson)
-
-
 [지도 표현]
 지도 표시 : Map_Marker(getChangeData, hLon, hLat, pubTotal)
   마커 표시 : folium.Map(location,zoom_start)
