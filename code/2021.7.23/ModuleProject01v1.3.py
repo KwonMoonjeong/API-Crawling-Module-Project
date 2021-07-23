@@ -13,8 +13,8 @@ import pandas as pd
 from pandas import json_normalize
 from multiprocessing import Pool
 
-client_id = "xa25ja6nca"
-client_secret = "1a3NIZFJLWWpgOnc1tgDJMFYTTKQLzVsXTH7T4X2"
+client_id = "mziw9a2pu6"
+client_secret = "w54VM8kbXW2mNKX4NbSjel7dIgUOfEUrpKcwt9O9"
 
 def Get_Request_GoUrl(url): # 크롤러를 담당하는 부분
     req = urllib.request.Request(url) #검색 URL 경로 지정    
