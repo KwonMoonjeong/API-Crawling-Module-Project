@@ -1,0 +1,48 @@
+<필요한 함수 목록>
+
+[데이터 크롤링]
+공공데이터 크롤러 : Get_Request_Go_Url(url)
+공공데이터 총 갯수 구하기 : Check_Total_Count(baseUrl, par)
+사전 준비 작업 및 분류 : Get_Go_Search_Result(baseUrl, par, pageValue, perPageValue)
+네이버 데이터 크롤러 : Get_Request_Naver_Url(addr)
+주소 입력, 좌표 추출 : Get_Geo_Loaction_Data(url)
+
+
+[데이터 정제]
+데이터 정제(공공 병원) : Get_Pubdata_Change(pubData) : B조 (유승현, 이슬)
+데이터 정제(위탁 의료기관) Get_Trustdata_Change(trustData) : A조 (권문정, 황성호)
+  - 컬럼명을 새롭게 만들기
+  - 딕셔너리명(changeDataName), 기관명(hName), 주소(hAddress) - 서울, 전화번호(hNum), 좌표(위도 : hLat, 경도 : hLon)
+위탁 의료기관 주소로 좌표 찾기 : GetDataChange(resultJsonData)
+multi processing한 결과 값 데이터 정제(주소, 위도, 경도) : Multiresult_To_Dic(results, index)
+
+[멀티프로세싱]
+Get_Geo_Loaction_Data 멀티프로세싱 : Get_Locate_Multi(urllist)
+
+[크롤링 데이터 검토용]
+공공 병원, 위탁 의료기관 JSON 파일을 병합 : Merge(ijson, jjson)
+
+
+[지도 표현]
+지도 표시 : Map_Marker(getChangeData, hLon, hLat, pubTotal)
+  마커 표시 : folium.Map(location,zoom_start)
+              folium.Marker(location,popup,tip).add_to(map_data)
+
+
+[Main 함수]
+Check_Total_Count(pubUrl, pubUrl_par)
+Get_Go_Search_Result(pubUrl, pubUrl_par, pageData, perPageData)
+Check_Total_Count(trustUrl, trustUrl_par)
+Get_Go_Search_Result(trustUrl, trustUrl_par, pageData, perPageData)
+Map_Marker(getChangeData, dataset[0]['hLon'], dataset[0]['hLat'], goDataTotal)
+
+<필요한 모듈 목록>
+import urllib.request
+import datetime
+import json
+import time
+import folium
+import pandas as pd
+from folium.map import Popup
+from pandas import json_normalize
+from multiprocessing import Pool
